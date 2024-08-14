@@ -8,7 +8,7 @@
 	},
 	"id": "alphalaneous.click_after_frames",
 	"name": "Click After Frames",
-	"version": "v1.0.1",
+	"version": "v1.0.2",
 	"developer": "Alphalaneous",
 	"description": "Allows inputs to register after frames. Like mobile or bad mouse, but with more lag and no physics bugs.",
 	"tags": [
@@ -26,7 +26,7 @@
 		},
 		"delay": {
 			"name": "Input Delay (ms)",
-			"description": "The delay each click takes",
+			"description": "The delay each click takes in milliseconds.",
 			"type": "int",
 			"default": 100,
 			"min": 0,
@@ -43,7 +43,7 @@
 		},
 		"rand-min": {
 			"name": "Random Min (ms)",
-			"description": "The minimum random delay",
+			"description": "The minimum random delay in milliseconds.",
 			"type": "int",
 			"default": 0,
 			"min": 0,
@@ -54,7 +54,7 @@
 		},
 		"rand-max": {
 			"name": "Random Max (ms)",
-			"description": "The maxmimum random delay",
+			"description": "The maxmimum random delay in milliseconds.",
 			"type": "int",
 			"default": 500,
 			"min": 0,
