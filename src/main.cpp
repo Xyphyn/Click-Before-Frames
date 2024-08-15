@@ -38,22 +38,24 @@ class $modify(MyGJBaseGameLayer, GJBaseGameLayer){
             GJBaseGameLayer::handleButton(down, button, isPlayer1);
         }
         else {
-            std::thread waitThread = std::thread{[=]() {
-                int ms = 0;
-                if (m_fields->m_isRandom) {
-                    if (down) {
-                        if (m_fields->m_randMin <= m_fields->m_randMax) {
-                            ms = random(m_fields->m_randMin, m_fields->m_randMax);
-                            m_fields->m_lastRand = ms;
-                        }
+            int ms = 0;
+            if (m_fields->m_isRandom) {
+                if (down) {
+                    if (m_fields->m_randMin <= m_fields->m_randMax) {
+                        ms = random(m_fields->m_randMin, m_fields->m_randMax);
+                        m_fields->m_lastRand = ms;
                     }
-                    else ms = m_fields->m_lastRand;
                 }
-                else ms = m_fields->m_delay;
+                else ms = m_fields->m_lastRand;
+            }
+            else ms = m_fields->m_delay;
+            std::thread waitThread = std::thread{[=]() {
                 std::this_thread::sleep_for(std::chrono::milliseconds{ms});
-                m_fields->m_doOriginal = true;
-                GJBaseGameLayer::handleButton(down, button, isPlayer1);
-                m_fields->m_doOriginal = false;
+                queueInMainThread([=]() {
+                    m_fields->m_doOriginal = true;
+                    GJBaseGameLayer::handleButton(down, button, isPlayer1);
+                    m_fields->m_doOriginal = false;
+                });
             }};
             waitThread.detach();
         }
