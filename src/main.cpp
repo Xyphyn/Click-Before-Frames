@@ -52,9 +52,11 @@ class $modify(MyGJBaseGameLayer, GJBaseGameLayer){
             std::thread waitThread = std::thread{[=]() {
                 std::this_thread::sleep_for(std::chrono::milliseconds{ms});
                 queueInMainThread([=]() {
-                    m_fields->m_doOriginal = true;
-                    GJBaseGameLayer::handleButton(down, button, isPlayer1);
-                    m_fields->m_doOriginal = false;
+                    if (PlayLayer::get()) {
+                        m_fields->m_doOriginal = true;
+                        GJBaseGameLayer::handleButton(down, button, isPlayer1);
+                        m_fields->m_doOriginal = false;
+                    }
                 });
             }};
             waitThread.detach();

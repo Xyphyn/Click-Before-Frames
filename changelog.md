@@ -1,3 +1,6 @@
+# 1.0.4
+- Fix rare crash
+
 # 1.0.3
 - Fix crashes
 
