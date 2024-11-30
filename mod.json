@@ -1,72 +1,66 @@
 {
-	"geode": "4.0.0-beta.1",
-	"gd": {
-		"win": "2.2074",
-		"android": "2.2074",
-		"mac": "2.2074",
-		"ios": "2.2074"
-	},
-	"id": "alphalaneous.click_after_frames",
-	"name": "Click After Frames",
-	"version": "v1.0.5",
-	"developer": "Alphalaneous",
-	"description": "Allows inputs to register after frames. Like mobile or bad mouse, but with more lag and no physics bugs.",
-	"tags": [
-		"performance",
-		"gameplay",
-		"enhancement",
-		"joke"
-	],
-	"settings": {
-		"soft-toggle": {
-			"name": "Disable CAF",
-			"description": "Disable CAF without needing to restart GD.",
-			"type": "bool",
-			"default": false
-		},
-		"delay": {
-			"name": "Input Delay (ms)",
-			"description": "The delay each click takes in milliseconds.",
-			"type": "int",
-			"default": 100,
-			"min": 0,
-			"control": {
-                "slider": false,
-				"arrows": false
-            }
-		},
-		"random-toggle": {
-			"name": "Randomize Delay",
-			"description": "Randomize delay between the two values after this",
-			"type": "bool",
-			"default": false
-		},
-		"rand-min": {
-			"name": "Random Min (ms)",
-			"description": "The minimum random delay in milliseconds.",
-			"type": "int",
-			"default": 0,
-			"min": 0,
-			"control": {
-                "slider": false,
-				"arrows": false
-            }
-		},
-		"rand-max": {
-			"name": "Random Max (ms)",
-			"description": "The maxmimum random delay in milliseconds.",
-			"type": "int",
-			"default": 500,
-			"min": 0,
-			"control": {
-                "slider": false,
-				"arrows": false
-            }
-		}
-	},
-	"links": {
-        "homepage": "https://linktr.ee/Alphalaneous",
-        "source": "https://github.com/Alphalaneous/Click-After-Frames",
-        "community": "https://discord.gg/Txn2CA5dHF"
+  "geode": "4.0.0-beta.1",
+  "gd": {
+    "win": "2.2074",
+    "android": "2.2074",
+    "mac": "2.2074",
+    "ios": "2.2074"
+  },
+  "id": "xylight.click_before_frames",
+  "name": "Click Before Frames",
+  "version": "v1.0.0",
+  "developer": "Xylight",
+  "description": "Uses an advanced nonexistent engine to predict your inputs before you trigger them.",
+  "tags": ["performance", "gameplay", "enhancement", "joke"],
+  "settings": {
+    "soft-toggle": {
+      "name": "Disable CBF",
+      "description": "Disable CBF without needing to restart GD.",
+      "type": "bool",
+      "default": false
+    },
+    "delay": {
+      "name": "Input Delay (ms)",
+      "description": "The delay each click takes in milliseconds.",
+      "type": "int",
+      "default": 100,
+      "min": 0,
+      "control": {
+        "slider": false,
+        "arrows": false
+      }
+    },
+    "random-toggle": {
+      "name": "Randomize Delay",
+      "description": "Randomize delay between the two values after this",
+      "type": "bool",
+      "default": true
+    },
+    "rand-min": {
+      "name": "Random Min (ms)",
+      "description": "The minimum random delay in milliseconds.",
+      "type": "int",
+      "default": 0,
+      "min": 0,
+      "control": {
+        "slider": false,
+        "arrows": false
+      }
+    },
+    "rand-max": {
+      "name": "Random Max (ms)",
+      "description": "The maxmimum random delay in milliseconds.",
+      "type": "int",
+      "default": 500,
+      "min": 0,
+      "control": {
+        "slider": false,
+        "arrows": false
+      }
     }
+  },
+  "links": {
+    "homepage": "https://xylight.dev",
+    "source": "https://github.com/Xyphyn/Click-Before-Frames"
+  }
 }

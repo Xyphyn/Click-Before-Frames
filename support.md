@@ -1,5 +1,5 @@
-# Support me on Ko-fi
+# Support alphalaneous on Ko-fi
 
-Do you like what I make and want to help out financially, support me on my Ko-fi page!
+He made this joke originally. i just lazily edited his code. go support him on ko-fi
 
 https://ko-fi.com/alphalaneous
